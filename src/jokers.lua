@@ -471,7 +471,7 @@ SMODS.Joker{
             return G.GAME.current_round.hands_left == 0 and G.GAME.blind.boss
         end
         return false
-
+    end
 }
 
 --SEAL
