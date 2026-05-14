@@ -1,7 +1,6 @@
 <img src="repo/Banner.png" alt="Mod's Banner"/>
 ___
-# Marine Foolin'
-Shimmerberry adds Custom, Fluffy and Vanilla-Like content:
+# Marine Foolin' adds Custom, Fluffy and Vanilla-Like content:
 
 - 15 Jokers
   > 7 Common<br> 4 Uncommon<br> 3 Rare<br> 1 Legendary
@@ -14,10 +13,9 @@ Shimmerberry adds Custom, Fluffy and Vanilla-Like content:
 - And more!
   > 8 Booster Packs<br> 1 challenge<br> 1 tag
 
-Programming by Marina(me).
-Art by me, with guest artists.
+Programming by Marina (me).
+Art by me, with Inky and Edwardard Robinson as guest artists.
 
-Requirements
 Marine Foolin' requires [Lovely](https://github.com/ethangreen-dev/lovely-injector) and [Steamodded](https://github.com/Steamodded/smods) to be installed,<br>
 visit the [Steammodded Wiki](https://github.com/Steamodded/smods/wiki) to learn how to setup & install mods.
 
