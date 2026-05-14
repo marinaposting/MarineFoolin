@@ -28,6 +28,7 @@ SMODS.Consumable {
     discovered = false,
     atlas = "devour",
     loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_SEALS[card.ability.extra.seal]
         return { vars = { colours = { HEX('0047AB')} } }
     end,
     config = { extra = { seal = 'mar_devour' }, max_highlighted = 1 },
@@ -79,6 +80,7 @@ SMODS.Consumable {
     discovered = false,
     atlas = "galumph",
     loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_SEALS[card.ability.extra.seal]
         return { vars = { colours = { HEX('8a9097')} } }
     end,
     config = { extra = { seal = 'mar_grey' }, max_highlighted = 1 },

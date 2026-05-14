@@ -262,7 +262,10 @@ SMODS.Booster {
     config = { extra = 2, choose = 1 },
     group_key = "mar_marine_pack",
     loc_vars = function(self, info_queue, card)
-        return { vars = { colours = { HEX('0047AB')} } }
+        return { 
+        vars = { colours = { HEX('0047AB')} },
+        key = self.key:sub(1, -3),
+        }
     end,
     ease_background_colour = function(self)
         ease_background_colour_blind(G.STATES.BUFFOON_PACK)
@@ -282,7 +285,10 @@ SMODS.Booster {
     config = { extra = 2, choose = 1 },
     group_key = "mar_marine_pack",
     loc_vars = function(self, info_queue, card)
-        return { vars = { colours = { HEX('0047AB')} } }
+        return { 
+        vars = { colours = { HEX('0047AB')} },
+        key = self.key:sub(1, -3)
+        }   
     end,
     ease_background_colour = function(self)
         ease_background_colour_blind(G.STATES.BUFFOON_PACK)
@@ -302,7 +308,10 @@ SMODS.Booster {
     config = { extra = 4, choose = 1 },
     group_key = "mar_marine_pack",
     loc_vars = function(self, info_queue, card)
-        return { vars = { colours = { HEX('0047AB')} } }
+        return { 
+        vars = { colours = { HEX('0047AB')} },
+        key = self.key:sub(1, -3), 
+        }
     end,
     ease_background_colour = function(self)
         ease_background_colour_blind(G.STATES.BUFFOON_PACK)
@@ -322,7 +331,11 @@ SMODS.Booster {
     config = { extra = 4, choose = 2 },
     group_key = "mar_marine_pack",
     loc_vars = function(self, info_queue, card)
-        return { vars = { colours = { HEX('0047AB')} } }
+        return { 
+        vars = { colours = { HEX('0047AB')} },
+        key = self.key:sub(1, -3),
+        }
+        
     end,
     ease_background_colour = function(self)
         ease_background_colour_blind(G.STATES.BUFFOON_PACK)
