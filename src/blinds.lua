@@ -9,15 +9,19 @@ SMODS.Blind {
     atlas = "maru_blinds",   
     boss = { min = 5 },             
     boss_colour = HEX("6e8d99"),
+    config = { extra = { odds = 5 } },
     loc_txt = {
         name = "The Shark",
         text = {
             "Played scoring cards",
-            "have a {C:green}1 in 5{} chance",
+            "have a {C:green}#1# in #2#{} chance",
             "to be destroyed"
         }
     },
-
+    loc_vars = function(self)
+        local numerator, denominator = SMODS.get_probability_vars(self, 1, 5, 'mar_shark')
+        return { vars = { numerator, denominator } }
+    end,
     calculate = function(self, blind, context)
         if not blind.disabled then
             

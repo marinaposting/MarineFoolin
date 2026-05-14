@@ -97,8 +97,10 @@ SMODS.Joker {
     eternal_compat = false,
     rarity = 1,
     cost = 4,
+    attributes = { 'chance' },
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.chips} }
+        local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'mar_castle')
+        return { vars = { card.ability.extra.chips, numerator, denominator} }
     end,
     calculate = function(self, card, context)
         if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
@@ -236,6 +238,7 @@ SMODS.Joker {
     cost = 4,
     atlas = "Jokers-Atlas",
     pos = { x = 1, y = 2 },
+    attributes = { 'chance' },
     config = { extra = { odds = 1000, Xchips = 3, Xchip_mod = 0.05 } },
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'mar_fortress')

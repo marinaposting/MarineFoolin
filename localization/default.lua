@@ -103,7 +103,7 @@ return {
 		    	text = {
 		    		"{C:chips}+#1#{} Chips, gains {C:chips}+1{}",
 		    		"per hand played.",
-		    		"{C:green}1 in 6{} chance this", 
+		    		"{C:green}#2# in #3#{} chance this", 
 		    		"card is destroyed", 
 		    		"at end of round"
 		    	}
@@ -113,7 +113,7 @@ return {
 		    	text = {
 		    		"{X:chips,C:white}X#1#{} Chips, gains {X:chips,C:white}X0.05{}",
 		    		"per hand played.",
-		    		"{C:green}1 in 1000{} chance this", 
+		    		"{C:green}#2# in #3#{} chance this", 
 		    		"card is destroyed", 
 		    		"at end of round"
 		    	}
