@@ -157,7 +157,7 @@ return {
 		    	name = "Marine Pack",
 		    	text = {
 		    		"Choose {C:attention}1{} of up to",
-		    		"{C:attention}2{V:1}Marine Foolin'",
+		    		"{C:attention}2{V:1} Marine Foolin'",
 		    		"{C:joker}Joker{} cards"
 		    	}
 		    },
@@ -165,7 +165,7 @@ return {
 		    	name = "Marine Jumbo Pack",
 		    	text = {
 		    		"Choose {C:attention}1{} of up to",
-		    		"{C:attention}4{V:1}Marine Foolin'",
+		    		"{C:attention}4{V:1} Marine Foolin'",
 		    		"{C:joker}Joker{} cards"
 		    	}
 		    },
@@ -173,7 +173,7 @@ return {
 		    	name = "Marine Mega Pack",
 		    	text = {
 		    		"Choose {C:attention}2{} of up to",
-		    		"{C:attention}4{V:1}Marine Foolin'",
+		    		"{C:attention}4{V:1} Marine Foolin'",
 		    		"{C:joker}Joker{} cards"
 		    	}
 		    },

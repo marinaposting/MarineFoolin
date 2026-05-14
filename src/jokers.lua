@@ -433,6 +433,7 @@ SMODS.Joker{
             local count = 0
             for _, joker in ipairs(G.jokers.cards) do
                 if joker.ability.set == 'Joker' and joker:has_attribute("chance") then
+                    print("chancee")
                     count = count + 1
                 end
                 if count >= 2 then
@@ -466,10 +467,10 @@ SMODS.Joker{
         end
     end,
     check_for_unlock = function(self, args)
-        return args.type == 'round_win' and
-            G.GAME.current_round.hands_left == 0 and
-            G.GAME.blind.boss
-    end
+        if args.type == 'round_win' then 
+            return G.GAME.current_round.hands_left == 0 and G.GAME.blind.boss
+        end
+        return false
 
 }
 
