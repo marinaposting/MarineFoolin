@@ -6,12 +6,6 @@ SMODS.Atlas ({
 })
 
 SMODS.Atlas ({
-    key = "Jokers-WIP",
-    path = "Jokers-WIP.png",
-    px = 71,
-    py = 95
-})
-SMODS.Atlas ({
     key = "Jokers-Niko",
     path = "niko.png",
     px = 71,
