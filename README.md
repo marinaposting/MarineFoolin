@@ -1,6 +1,7 @@
 <div align="center">
   <img src="repo/Banner.png" alt="Mod's Banner"/>
 </div>
+
 ### Marine Foolin' is a vanilla-esque Ocean themed expansion for Balatro that adds 15 new Jokers with balanced and fun effects!
 
 ## ADDITIONS
@@ -18,7 +19,9 @@
 Programming by Marina (me).
 Art by me, with Inky and Edwardard Robinson as guest artists.
 
-Marine Foolin' requires [Lovely](https://github.com/ethangreen-dev/lovely-injector) and [Steamodded](https://github.com/Steamodded/smods) to be installed,<br>
-Any mod that adds seals should be compatible with this mod,<br>
+Marine Foolin' requires [Lovely](https://github.com/ethangreen-dev/lovely-injector) and [Steamodded](https://github.com/Steamodded/smods) to be installed<br>
+
+Any mod that adds seals should be compatible with this mod<br>
+
 visit the [Steammodded Wiki](https://github.com/Steamodded/smods/wiki) to learn how to setup & install mods.
 
