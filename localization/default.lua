@@ -19,6 +19,16 @@ return {
 		Blind = {
 
 		},
+		Tag ={
+			tag_mar_marine = {
+				name = "Marine Tag",
+				text = {
+				"Shop has a free",
+				"{C:spectral}Marine Foolin'",
+				"Joker"
+				}
+			}
+		},
 		Joker = {
 			j_mar_niko = {
 				name = "Niko",
@@ -26,7 +36,10 @@ return {
 					"Retrigger all cards",
 					"that have a {C:spectral,T:red_seal}Seal{}",
 					"{C:attention}2{} additional times"
-				}
+				},
+				unlock = {
+                    "{E:1,s:1.3}?????",
+                },
 			},
 			j_mar_Fishing = {
 		        name = "Time go Fishing",
@@ -44,10 +57,14 @@ return {
 			j_mar_betta = {
 		        name = "Betta splendens",
 		        text = {
-		            "{X:chips,C:white}X1{} Chips for each",
+		            "{X:chips,C:white}X1.5{} Chips for each",
 		            "hand size below {C:attention}8{}",
 		            "{C:inactive}(Currently {X:chips,C:white}X#1#{C:inactive})"
-		        }				
+		        },
+		        unlock = {
+		        	"Reduce your hand size", 
+		        	"down to six cards"
+		        }		
 			},
 		    j_mar_seal = {
 		        name = "Seal",
@@ -57,6 +74,66 @@ return {
 		            "{C:spectral}seal{} in your {C:attention}full deck{}",
 		            "{C:inactive}(Currently {C:blue}+#2#{C:inactive})"
 		        }
+		    },
+		    j_mar_deep = {
+		        name = "The Deep",
+		        text = {
+		            "{C:dark_edition}Negative{} Jokers each",
+		            "exert {X:dark_edition,C:white}10psi{} Pressure"
+		        },
+		        unlock = {
+		        	"Beat the {C:spectral,E:2}'Infested Waters'{} Challenge"
+		        }
+		        
+		    },
+		    j_mar_dive = {
+		        name = "Dive",
+		        text = {
+		            "Exerts {X:dark_edition,C:white}10psi{} Pressure",
+		            "if played hand contains",
+		            "{C:attention}5{} scoring cards"
+		        },
+		        unlock = {
+		        	"Defeat a Boss Blind",
+		        	"on your {C:attention}Last Hand{}"
+		        }
+		    },
+		    j_mar_castle = {
+		    	name = "Sand Castle",
+		    	text = {
+		    		"{C:chips}+#1#{} Chips, gains {C:chips}+1{}",
+		    		"per hand played.",
+		    		"{C:green}1 in 6{} chance this", 
+		    		"card is destroyed", 
+		    		"at end of round"
+		    	}
+		    },
+		    j_mar_fortress = {
+		    	name = "Sand Fortress",
+		    	text = {
+		    		"{X:chips,C:white}X#1#{} Chips, gains {X:chips,C:white}X0.05{}",
+		    		"per hand played.",
+		    		"{C:green}1 in 1000{} chance this", 
+		    		"card is destroyed", 
+		    		"at end of round"
+		    	}
+		    },
+		    j_mar_marina = {
+		    	name = "Marina",
+		    	text = {
+		    		"Each card in your",
+		    		"{C:attention}Consumable{} area",
+		    		"gives {C:chips}+40{} Chips"
+		    	}
+		    },
+		    j_mar_pearl = {
+		    	name = "Pearl",
+		    	text = {
+		    		"Earn {C:money}money{} equivalent",
+		    		"to the level of the",
+		    		"last played {C:attention}poker hand",
+		    		"at end of round"
+		    	}
 		    }
 		},
 		Other = {
@@ -76,6 +153,39 @@ return {
 		            "be used immediately"
 		        }
 		    },
+		    p_mar_marine_normal = {
+		    	name = "Marine Pack",
+		    	text = {
+		    		"Choose {C:attention}1{} of up to",
+		    		"{C:attention}2{V:1}Marine Foolin'",
+		    		"{C:joker}Joker{} cards"
+		    	}
+		    },
+		    p_mar_marine_jumbo = {
+		    	name = "Marine Jumbo Pack",
+		    	text = {
+		    		"Choose {C:attention}1{} of up to",
+		    		"{C:attention}4{V:1}Marine Foolin'",
+		    		"{C:joker}Joker{} cards"
+		    	}
+		    },
+		    p_mar_marine_mega = {
+		    	name = "Marine Mega Pack",
+		    	text = {
+		    		"Choose {C:attention}2{} of up to",
+		    		"{C:attention}4{V:1}Marine Foolin'",
+		    		"{C:joker}Joker{} cards"
+		    	}
+		    },
+		    mar_pressure_desc = {
+		    	name = "Pressure",
+		    	text = {
+		    		"Reduce a percentage",
+		    		"of the {C:blind}Blind{}",
+		    		"requirement equal to",
+		    		"the amount of {C:dark_edition}Pressure{}"
+		    	}
+		    }
 		},
 		Planet = {
 			c_mar_mediterranean = {
@@ -139,12 +249,16 @@ return {
 		},
 	},
 	misc = {
-			dictionary = {
-				mar_sealed_pack = "Sealed Pack",
-				mar_seven_pack = "Seven Seas Pack"
-			},
-			challenge_names = {
-				
+		dictionary = {
+			mar_sealed_pack = "Sealed Pack",
+			mar_seven_pack = "Seven Seas Pack",
+			mar_marine_pack = "Marine Pack"
+		},
+		challenge_names = {
+			c_mar_waters = "Infested Waters"
+		},
+		v_text = {
+			ch_c_mar_waters = {"Fight against {C:spectral,E:2}water themed{} Blinds"}
 		}
 	}
 }

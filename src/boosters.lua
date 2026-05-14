@@ -28,7 +28,7 @@ SMODS.ObjectType {
 
 SMODS.ObjectType {
     key = "mar_planets",
-    default = "k_mar_booster_group",
+    default = "mar_seven_pack",
     primary_colour = G.C.SET.Spectral,
     secondary_colour = G.C.SECONDARY_SET.Spectral,
     cards = {
@@ -41,6 +41,30 @@ SMODS.ObjectType {
         c_mar_pacific = true,
     }
 }
+
+SMODS.ObjectType {
+    key = "mar_jokers",
+    default = "mar_marine_pack",
+    primary_colour = G.C.SET.Joker,
+    secondary_colour = G.C.SECONDARY_SET.Joker,
+    cards = {
+        j_mar_beach = true,
+        j_mar_lifesaver = true,
+        j_mar_castle = true,
+        j_mar_mermaid = true,
+        j_mar_marina = true,
+        j_mar_pearl = true,
+        j_mar_fortress = true,
+        j_mar_wave = true,
+        j_mar_sushi = true,
+        j_mar_Fishing = true,
+        j_mar_dive = true,
+        j_mar_seal = true,
+        j_mar_betta = true,
+        j_mar_deep = true,
+    }
+}
+
 
 SMODS.Booster {
     key = "sealed_normal_1",
@@ -225,5 +249,85 @@ SMODS.Booster {
             soulable = true,
             key_append = "mar_planets"
         }
+    end,
+}
+
+SMODS.Booster {
+    key = "marine_normal_1",
+    weight = 0.6,
+    kind = 'mar_jokers', -- You can also use Buffoon if you want it to belong to the vanilla kind
+    cost = 4,
+    atlas = "Boosters_Atlas",
+    pos = { x = 0, y = 1 },
+    config = { extra = 2, choose = 1 },
+    group_key = "mar_marine_pack",
+    loc_vars = function(self, info_queue, card)
+        return { vars = { colours = { HEX('0047AB')} } }
+    end,
+    ease_background_colour = function(self)
+        ease_background_colour_blind(G.STATES.BUFFOON_PACK)
+    end,
+    create_card = function(self, card, i)
+        return { set = "mar_jokers", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "mar_jokers" }
+    end,
+}
+
+SMODS.Booster {
+    key = "marine_normal_2",
+    weight = 0.6,
+    kind = 'mar_jokers', -- You can also use Buffoon if you want it to belong to the vanilla kind
+    cost = 4,
+    atlas = "Boosters_Atlas",
+    pos = { x = 1, y = 1 },
+    config = { extra = 2, choose = 1 },
+    group_key = "mar_marine_pack",
+    loc_vars = function(self, info_queue, card)
+        return { vars = { colours = { HEX('0047AB')} } }
+    end,
+    ease_background_colour = function(self)
+        ease_background_colour_blind(G.STATES.BUFFOON_PACK)
+    end,
+    create_card = function(self, card, i)
+        return { set = "mar_jokers", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "mar_jokers" }
+    end,
+}
+
+SMODS.Booster {
+    key = "marine_jumbo_1",
+    weight = 0.6,
+    kind = 'mar_jokers', -- You can also use Buffoon if you want it to belong to the vanilla kind
+    cost = 6,
+    atlas = "Boosters_Atlas",
+    pos = { x = 2, y = 1 },
+    config = { extra = 4, choose = 1 },
+    group_key = "mar_marine_pack",
+    loc_vars = function(self, info_queue, card)
+        return { vars = { colours = { HEX('0047AB')} } }
+    end,
+    ease_background_colour = function(self)
+        ease_background_colour_blind(G.STATES.BUFFOON_PACK)
+    end,
+    create_card = function(self, card, i)
+        return { set = "mar_jokers", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "mar_jokers" }
+    end,
+}
+
+SMODS.Booster {
+    key = "marine_mega_1",
+    weight = 0.3,
+    kind = 'mar_jokers', -- You can also use Buffoon if you want it to belong to the vanilla kind
+    cost = 8,
+    atlas = "Boosters_Atlas",
+    pos = { x = 3, y = 1 },
+    config = { extra = 4, choose = 2 },
+    group_key = "mar_marine_pack",
+    loc_vars = function(self, info_queue, card)
+        return { vars = { colours = { HEX('0047AB')} } }
+    end,
+    ease_background_colour = function(self)
+        ease_background_colour_blind(G.STATES.BUFFOON_PACK)
+    end,
+    create_card = function(self, card, i)
+        return { set = "mar_jokers", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "mar_jokers" }
     end,
 }

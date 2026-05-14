@@ -14,6 +14,8 @@ assert(SMODS.load_file("src/seals.lua"))()
 assert(SMODS.load_file("src/spectrals.lua"))()
 assert(SMODS.load_file("src/boosters.lua"))()
 assert(SMODS.load_file("src/planets.lua"))()
+assert(SMODS.load_file("src/challenges.lua"))()
+assert(SMODS.load_file("src/tags.lua"))()
 
 
 SMODS.current_mod.optional_features = function()

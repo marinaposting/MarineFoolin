@@ -4,6 +4,12 @@ SMODS.Atlas ({
     px = 71,
     py = 95,
 })
+SMODS.Atlas ({
+    key = "seal_seal",
+    path = "seal_seal.png",
+    px = 71,
+    py = 95,
+})
 
 SMODS.Seal {
     key = "devour",
@@ -48,6 +54,46 @@ SMODS.Seal {
                     end
                 end
             end
+        end
+    end
+}
+SMODS.Seal {
+    key = "grey",
+    atlas = "seal_seal",
+    badge_colour = HEX("8a9097"),
+    loc_txt = {
+        name = "Grey Seal",
+        label = "Grey Seal",
+        text = {
+            "Create a {C:spectral}Seal",
+            "card when {C:attention}played",
+        },
+    unlocked = true,
+    discovered = true,
+    },
+    calculate = function(self, card, context)
+        if context.main_scoring and context.cardarea == G.play and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+            G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+            return {    
+                extra = {
+                    message = localize('k_plus_spectral'), 
+                    colour = G.C.Spectral,
+                    func = function()
+                        G.E_MANAGER:add_event(Event({
+                            func = (function()
+                                SMODS.add_card{ 
+                                set = 'mar_seals', 
+                                area = G.consumeables 
+                                }
+                                G.GAME.consumeable_buffer = 0
+                                return true
+                            end)
+                        }))
+                    end
+                },
+            }        
+                 
+               
         end
     end
 }
