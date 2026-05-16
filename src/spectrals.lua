@@ -15,15 +15,6 @@ SMODS.Atlas ({
 SMODS.Consumable {
     key = 'devour_spectral',
     set = 'Spectral',
-    loc_txt = {
-        name = "Devour",
-        text = {
-            "Add a {V:1}Riptide Seal{}",
-            "to {C:attention}1{} selected",
-            "card in your hand"
-        },
-
-    },
     unlocked = true,
     discovered = false,
     atlas = "devour",
@@ -67,15 +58,6 @@ SMODS.Consumable {
 SMODS.Consumable {
     key = 'galumph_spectral',
     set = 'Spectral',
-    loc_txt = {
-        name = "Galumph",
-        text = {
-            "Add a {V:1}Grey Seal{}",
-            "to {C:attention}1{} selected",
-            "card in your hand"
-        },
-
-    },
     unlocked = true,
     discovered = false,
     atlas = "galumph",

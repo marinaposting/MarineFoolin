@@ -10,17 +10,12 @@ SMODS.Blind {
     boss = { min = 5 },             
     boss_colour = HEX("6e8d99"),
     config = { extra = { odds = 5 } },
-    loc_txt = {
-        name = "The Shark",
-        text = {
-            "Played scoring cards",
-            "have a {C:green}#1# in #2#{} chance",
-            "to be destroyed"
-        }
-    },
     loc_vars = function(self)
         local numerator, denominator = SMODS.get_probability_vars(self, 1, 5, 'mar_shark')
         return { vars = { numerator, denominator } }
+    end,
+    collection_loc_vars = function(self)
+        return { vars = { '1' } }
     end,
     calculate = function(self, blind, context)
         if not blind.disabled then
@@ -44,15 +39,6 @@ SMODS.Blind {
     atlas = "maru_blinds",   
     boss = { min = 3 },             
     boss_colour = HEX("2c2c2c"),
-    loc_txt = {
-        name = "The Orca",
-        text = {
-            "All playing cards",
-            "with a seal are",
-            "debuffed"
-        }
-    },
-
     recalc_debuff = function(self, card, from_blind)
         if card.area ~= G.jokers and not G.GAME.blind.disabled then
             if card.seal then
@@ -72,15 +58,6 @@ SMODS.Blind {
     atlas = "maru_blinds", 
     boss = {showdown = true},
     boss_colour = HEX("0047ab"),
-    loc_txt = {
-        name = "Cobalt Sea",
-        text = {
-            "After play, all enhancements",
-            "and seals from cards held",
-            "in hand are washed away"
-        }
-    },
-
     press_play = function(self)
         G.E_MANAGER:add_event(Event({func = function()
             local triggered = false

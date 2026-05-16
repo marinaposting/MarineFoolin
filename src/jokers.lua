@@ -16,12 +16,6 @@ SMODS.Atlas ({
 SMODS.Joker {
     key = "beach",
     config = { extra = { chips = 75} },
-    loc_txt = {
-        name = "Beach Joker",
-        text = {
-            "{C:chips}+75{} Chips"
-        }
-    },
     atlas = 'Jokers-Atlas',
     pos = {x = 2, y = 1},
     blueprint_compat = true,
@@ -42,15 +36,6 @@ SMODS.Joker {
 SMODS.Joker {
     key = "lifesaver",
     config = { extra = { chips = 82 , mult = 36 } },
-    loc_txt = {
-        name = "Life Buoy",
-        text = {
-            "Sell this card to",
-            "discard all non-selected", 
-            "{C:attention}playing cards{}",
-            "{C:inactive,s:0.8}(art by edward robinson{C:inactive,s:0.8})"
-        }
-    },
     atlas = 'Jokers-Atlas',
     pos = {x = 1, y = 1},
     blueprint_compat = false,
@@ -161,15 +146,6 @@ SMODS.Joker {
 SMODS.Joker{
     key = "mermaid",
     config = { extra = { chips = 0, chip_mod = 20 } },
-    loc_txt = {
-        name = "Mermaid",
-        text = {
-            "{C:chips}+20{} Chips per {C:spectral}spectral{}",
-            "cards used this run",
-            "{C:inactive}(Currently {C:chips}+#1#{C:inactive})",
-            "{C:inactive,s:0.8}(art by Inky){}"
-        }
-    },
     atlas = "Jokers-Atlas",
     pos = {x = 4, y = 0},
     rarity = 1,
@@ -301,13 +277,6 @@ SMODS.Joker {
 SMODS.Joker{
     key = "wave",
     config = { extra = { repetitions = 1 } },
-    loc_txt = {
-        name = "Wave",
-        text = {
-            "Retrigger {C:attention}every other{}",
-            "played card used in scoring"
-        }
-    },
     atlas = 'Jokers-Atlas',
     pos = {x = 2, y = 0},
     rarity = 2,
@@ -343,14 +312,6 @@ SMODS.Joker{
 SMODS.Joker{
     key = "sushi",
     config = { extra = { hands_left = 10, dollars = 1 } },
-    loc_txt = {
-        name = "Sushi",
-        text = {
-            "Played cards earn",
-            "{C:money}$1{} for the",
-            "next {C:attention}#1#{} hands"
-        }
-    },
     atlas = 'Jokers-Atlas',
     pos = {x = 3, y = 0},
     rarity = 2,

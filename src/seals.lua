@@ -15,18 +15,8 @@ SMODS.Seal {
     key = "devour",
     atlas = "rip_seal",
     badge_colour = HEX("0047AB"),
-    loc_txt = {
-        name = "Riptide Seal",
-        label = "Riptide Seal",
-        text = {
-            "Discard to destroy the",
-            "next {C:attention,E:1}held in hand{}",
-            "{C:attention}playing card{} to the left",
-            "{C:inactive,s:0.8}(Drag to rearrange{C:inactive,s:0.8})"
-        },
     unlocked = true,
     discovered = true,
-    },
     calculate = function(self, card, context)
         if context.discard and context.other_card == card then
             local hand_cards = G.hand.cards
@@ -61,16 +51,8 @@ SMODS.Seal {
     key = "grey",
     atlas = "seal_seal",
     badge_colour = HEX("8a9097"),
-    loc_txt = {
-        name = "Grey Seal",
-        label = "Grey Seal",
-        text = {
-            "Create a {C:spectral}Seal",
-            "card when {C:attention}played",
-        },
     unlocked = true,
     discovered = true,
-    },
     calculate = function(self, card, context)
         if context.main_scoring and context.cardarea == G.play and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
             G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
